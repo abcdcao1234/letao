@@ -1,0 +1,11 @@
+@charset "utf-8";
+.bd_color{
+  background-color: #222D32;
+}
+.panel{
+   margin-top: 150px;
+}
+.panel-title{
+  height: 30px;
+  line-height: 30px;
+}
