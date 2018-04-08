@@ -60,10 +60,10 @@ $(function(){
            if( info.success){
              location.href="index.html";
            }
-          if(info.error==1000){
+          if(info.error===1000){
             $('#form').data('bootstrapValidator').updateStatus('username',"INVALID","callback")
           }
-          if(info.error=1001){
+          if(info.error===1001){
               //alert('密码错误');
             //参数1：字段名称，参数二:校验状态，参数三：检验规则，可以设置检验文本
             $('#form').data('bootstrapValidator').updateStatus('password',"INVALID","callback")
