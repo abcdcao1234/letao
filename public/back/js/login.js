@@ -72,7 +72,7 @@ $(function(){
 
     })
   })
-//  表单重置功能的实现
+//  3.表单重置功能的实现
   $('[type="reset"]').on('click',function(){
     $('#form').data('bootstrapValidator').resetForm();
   })
