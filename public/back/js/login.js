@@ -38,6 +38,7 @@ $(function(){
                    max:12,
                    message:'密码必须在6-12位之间'
                 },
+                //专门用于配制回调信息的校验规则
                 callback:{
                    message:'密码错误'
                 }
@@ -47,6 +48,7 @@ $(function(){
       },
     });
    //  2.登录请求
+  //进行ajax进行登录请求
   $('#form').on('success.form.bv',function(e){
     e.preventDefault();
     $.ajax({
@@ -56,15 +58,15 @@ $(function(){
         data:$('#form').serialize(),
         success:function( info ){
            if( info.success){
-              alert('登录成功');
+             location.href="index.html";
            }
           if(info.error==1000){
-            $('#form').data('bootstrapValidator').updateStatus('username',INVALID,"callback")
+            $('#form').data('bootstrapValidator').updateStatus('username',"INVALID","callback")
           }
           if(info.error=1001){
               //alert('密码错误');
             //参数1：字段名称，参数二:校验状态，参数三：检验规则，可以设置检验文本
-            $('#form').data('bootstrapValidator').updateStatus('password',INVALID,"callback")
+            $('#form').data('bootstrapValidator').updateStatus('password',"INVALID","callback")
           }
         }
 
