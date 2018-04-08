@@ -12,6 +12,19 @@
        },500);
 
     })
+//  拦截功能的实现,根据地址后面有无login.html进行判断
+  if(location.href.indexOf("login.html")===-1){
+    $.ajax({
+        url:"/employee/checkRootLogin",
+        type:'get',
+        success:function( info ){
+            console.log( info );
+          if(info.error==400){
+             location.href="login.html";
+          }
+        }
+    })
+  }
 $(function(){
 //   1.二级功能的实现
   $('.categrory').click(function(){
@@ -43,4 +56,5 @@ $(function(){
   })
 
 })
+
 
