@@ -2,11 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title><!DOCTYPE html>
-    <html lang="zh-CN">
-    <head>
-      <meta charset="UTF-8">
-      <title>首页</title>
+  <title>一级分类</title>
       <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
       <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.css">
       <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
@@ -45,11 +41,54 @@
     <a href="#" class="pull-right icon_logout"><i class="glyphicon glyphicon-log-out"></i></a>
   </div>
   <!--路径导航-->
-  <div class="container_fluid">
-    <ol class="breadcrumb">
-      <li><a href="#">管理系统</a></li>
-      <li><a href="index.html">首页</a></li>
-    </ol>
+    <div class="container-fluid">
+      <ol class="breadcrumb">
+        <li><a href="#">管理系统</a></li>
+        <li><a href="#"> 分类管理</a></li>
+        <li><a href="#">一级分类</a></li>
+      </ol>
+      <div class="lt_content">
+        <button class="btn btn-default mrt" id="addBtn">添加分类</button>
+        <table class="table table-bordered table-hover">
+          <thead>
+          <tr>
+            <th width="20%">序号</th>
+            <th width="80%">一级分类名</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- 刨个坑 -->
+          </tbody>
+        </table>
+        <!--页码的渲染-->
+        <div class="text-right">
+          <ul id="paginator">
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<!--添加分类的模态框-->
+<div class="modal fade " id="addModal">
+  <div class="modal-dialog modal-sm" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+        <h4 class="modal-title" >添加分类</h4>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="请输入一级分类的名称" name="categoryName">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <!--h5新增form属性，可以让表单外的按钮与表单关联起来，相当于写在了表单里面-->
+        <button type="submit" class="btn btn-primary" form="form">添加</button>
+      </div>
+    </div>
   </div>
 </div>
 <!--登录退出的模态框,  配置 data-dismiss="modal" 可以关闭模态框 -->
@@ -75,11 +114,17 @@
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.js"></script>
 <script src="./js/common.js"></script>
-</body>
-</html></title>
-</head>
-<body>
-
+<script src="./js/first.js"></script>
+<script type="text/html" id="first">
+  {{each rows v i}}
+  <tr>
+     <td>{{(page-1)*size+i+1}}</td>
+     <td>{{v.categoryName}}</td>
+  </tr>
+  {{/each}}
+</script>
 </body>
 </html>

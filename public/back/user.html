@@ -41,7 +41,7 @@
     <a href="#" class="pull-right icon_logout"><i class="glyphicon glyphicon-log-out"></i></a>
   </div>
   <!--路径导航-->
-  <div class="container_fluid">
+  <div class="container-fluid">
     <ol class="breadcrumb">
       <li><a href="#">管理系统</a></li>
       <li><a href="index.html">首页</a></li>
@@ -118,7 +118,7 @@
 <script type="text/html" id="tmp">
   {{each rows v i}}
       <tr>
-        <td>{{i+1}}</td>
+        <td>{{(page-1)*size+i+1}}</td>
         <td>{{v.username}}</td>
         <td>{{v.mobile}}</td>
         <td>{{v.isDelete===1?'正常':'禁用'}}</td>

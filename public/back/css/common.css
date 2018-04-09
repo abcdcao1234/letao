@@ -13,6 +13,9 @@ a:visited{
 body,html{
   height: 100%;
 }
+.mrt{
+   margin-bottom:20px;
+}
 .table.table-bordered th,
 .table.table-bordered td{
    text-align: center;
