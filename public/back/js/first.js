@@ -64,7 +64,6 @@ $(function(){
   // (使用form="form", 通过了校验, 也不会提交了, 可以省去 e.preventDefault() )
   $('#form').on('success.form.bv',function(e){
     e.preventDefault();
-    alert($('#form').serialize());
     $.ajax({
       url: "/category/addTopCategory",
       type: "POST",
