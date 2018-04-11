@@ -1,0 +1,46 @@
+
+/* 主体部分*/
+.itembox{
+   padding:10px;
+   border-top:1px solid #ccc;
+}
+.price{
+    color:red;
+    font-size: 16px;
+}
+.oldPrice{
+    color:#666;
+     text-decoration: line-through;
+  font-size: 12px;
+}
+.size span{
+  height: 25px;
+  display: inline-block;
+  line-height: 25px;
+  background-color: #F5F5F5;
+  border:1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+  padding:0 3px;
+  margin:4px 0;
+}
+.reminded{
+   margin-left:5px;
+  font-size: 12px;
+  color:#666;
+}
+
+/*详情底部*/
+.lt_footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  width: 100%;
+  background-color: #EFEFF4;
+  border-top: 1px solid #FF0000;
+  padding: 10px 10px 0 10px;
+}
+.go_cart{
+   padding-top:5px;
+}

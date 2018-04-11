@@ -1,0 +1,35 @@
+
+/* 搜索历史*/
+.history{
+    padding:10px;
+   font-size: 12px;
+}
+.history_title {
+   color:#666;
+}
+.history_title span{
+  height: 30px;
+  line-height: 30px;
+}
+.history_content ul{
+   border:1px dashed  #FF0000;
+}
+.history_content li{
+  border-bottom:1px dashed  #FF0000;
+  height: 30px;
+  line-height: 30px;
+
+}
+.history_content li a{
+  padding:0 10px;
+}
+.history_content li .mui-icon{
+   line-height: 30px;
+}
+.history_content li:last-child{
+   border-bottom: none;
+}
+.none{
+    color:#8F8F94;
+  font-size: 14px;
+}

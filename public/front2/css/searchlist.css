@@ -1,0 +1,40 @@
+/*排序*/
+.lt_sort{
+  height: 30px;
+  background-color: #EEE;
+  padding: 0 10px;
+}
+.lt_sort a{
+   float:left;
+   width:25%;
+   height: 30px;
+  line-height: 30px;
+   text-align: center;
+  font-size: 14px;
+  color:#666;
+}
+.lt_sort .current{
+   color:orange;
+}
+.lt_sort i{
+   margin-left:5px;
+}
+/*loading*/
+.loading{
+  width: 40px;
+  height: 40px;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:200px;
+  border:3px solid #006699;
+  animation:rotate 2s;
+}
+@keyframes rotate {
+     from{
+        transform:  translateX(-50%) rotate(0deg);
+     }
+     to{
+      transform:  translateX(-50%) rotate(360deg);
+     }
+}
